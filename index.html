@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoPadel PKP - Linktree / Digital Card</title>
+    <!-- Font Awesome untuk Icon Social Media & Whatsapp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #8c6e38; /* Warna cokelat emas/gold khas GoPadel */
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: var(--card-bg);
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px var(--shadow-color);
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+        }
+
+        .btn i {
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Styling spesifik tombol */
+        .btn-wa-reservation {
+            background-color: #25D366;
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-save-contact {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-youtube {
+            background-color: #FF0000;
+            color: #ffffff;
+            border: none;
+        }
+
+        /* Jarak/Skip Kotak */
+        .spacer {
+            height: 30px;
+        }
+
+        .btn-feedback {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Profile -->
+        <div class="header">
+            <h1>GoPadel PKP</h1>
+            <p>Papinka Valley, Jl. Depati Hamzah No.999, Semabung Lama, Kec. Bukitintan, Kota Pangkal Pinang, Kepulauan Bangka Belitung 33148</p>
+        </div>
+
+        <!-- Group Tombol Utama -->
+        <div class="links-group">
+            <!-- 1. WhatsApp Reservation -->
+            <a href="https://wa.me/6283182008195?text=Halo%20GoPadel,%20saya%20ingin%20melakukan%20reservasi." target="_blank" class="btn btn-wa-reservation">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp (For Reservation)
+            </a>
+
+            <!-- Save Contact (vCard / Download kontak) -->
+            <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AGoPadel%20PKP%20Reservation%0ATEL%3BTYPE%3DCELL%3A%2B6283182008195%0AEND%3AVCARD" download="GoPadel_Reservation.vcf" class="btn btn-save-contact">
+                <i class="fa-solid fa-address-book"></i> Save Contact
+            </a>
+
+            <!-- 2. Instagram -->
+            <a href="https://www.instagram.com/gopadelpkp?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-instagram">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+
+            <!-- 3. Youtube -->
+            <a href="https://youtube.com/@gopadelpkp?si=No91XVJK5gEuA340" target="_blank" class="btn btn-youtube">
+                <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+
+            <!-- Skip 1 Kotak / Jarak -->
+            <div class="spacer"></div>
+
+            <!-- Bagian Bawah: Kritik & Saran -->
+            <a href="https://wa.me/6281911592800?text=Halo%20GoPadel,%20saya%20ingin%20menyampaikan%20kritik/saran." target="_blank" class="btn btn-feedback">
+                <i class="fa-brands fa-whatsapp"></i> Kritik & Saran
+            </a>
+        </div>
+
+        <div class="footer">
+            &copy; GoPadel PKP. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
